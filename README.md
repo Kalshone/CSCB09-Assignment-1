@@ -10,16 +10,22 @@ This is Assignment 1 for CSCB09, the Systms Monitoring Tool. This project is a s
     ./a.out
 
     The program also takes optional command arguments:
-    --system: displays the system stats (memory and cpu data) only
-    --user: displays the user and session stats only
-    --graphics: adds a graphic display of the memory and cpu usage
-    --sequential: runs the program in sequential mode where the program will run interations, perfect to outpu to another file
-    --samples=N: sets the number of samples to N (default is 10) 
-        can also be activated by writing only a number after the program name, e.g. ./a.out 5
-    --tdelay=T: sets the delay between samples to T seconds (default is 1) 
-        can also be activated by writing only a number after the program name, but must also include a samples value e.g. ./a.out 5 2
 
-3. The program will then run and display the system stats.
+   --system: displays the system stats (memory and CPU data) only
+
+   --user: displays the user and session stats only
+
+   --graphics: adds a graphic display of the memory and CPU usage
+
+   --sequential: runs the program in sequential mode where the program will run interactions, perfect to output to another file
+
+   --samples=N: sets the number of samples to N (default is 10) 
+        can also be activated by writing only a number after the program name, e.g. ./a.out 5
+
+   --tdelay=T: sets the delay between samples to T seconds (default is 1) 
+        can also be activated by writing only a number after the program name, but must also include a sample value e.g. ./a.out 5 2
+
+4. The program will then run and display the system stats.
 
 ## Table of contents
 <!-- 
@@ -50,7 +56,7 @@ I built this with C, using the following libraries:
 - ctype.h 
 - math.h
 
-### Fuction Insight
+### Function Insight
 main() - The main function of the program. It takes in command line arguments and runs the program accordingly. It also calls the other functions to display the system stats. It stores integers that represent if the command arguments have been activated and then runs the program accordingly. It also stores the number of samples and the time delay between samples. It then runs the program in a loop depending on the number of samples + 1, calling the other functions to display the system stats. Every time the loop iterates, the program sleeps before it clears the screen using ANSI escape codes and displays the updated stats. During the first iteration of the loop, the program also stores the initial CPU values to use for the CPU and memory usage calculations and begins displaying the memory and CPU values on the next iteration so that the program can compare the current CPU values to the initial CPU values. This is why the loop runs for the number of samples + 1.
 
 print_memory_usage() - This function prints the memory usage of the system in KB. It uses rusage from the sys/resource.h library to get the maximum memory usage and then prints it to the console. The maximum represents the maximum memory the program can use.
