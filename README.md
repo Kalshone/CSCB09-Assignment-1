@@ -40,7 +40,7 @@ This is Assignment 1 for CSCB09, the Systms Monitoring Tool. This project is a s
 
 ### Screenshot
 
-<!-- ![screenshot](https://github.com/Kalshone/QRCode/blob/main/images/qr-screenshot.png?raw=true) -->
+<!-- ![screenshot][(https://github.com/Kalshone/CSCB09-Assignment-1/blob/main/Screen%20Shot%202024-02-04%20at%202.17.46%20AM.png) -->
 
 ### Built with
 I built this with C, using the following libraries:
